@@ -11,5 +11,6 @@ The purpose of this final-project is to complete the final session of LnT Java p
 - MySQL Workbench 8.0 CE: to create the database
 
 # How to login?
-username: user\n
+username: user
+
 password: user123
