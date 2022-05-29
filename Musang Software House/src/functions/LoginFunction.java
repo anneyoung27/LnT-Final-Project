@@ -14,16 +14,16 @@ public class LoginFunction {
         String password = String.valueOf(view.getPasswordField().getPassword());
 
         if(userName.equals("")){
-            JOptionPane.showMessageDialog(view, "Tolong pastikan username tidak boleh kosong.");
+            JOptionPane.showMessageDialog(view, "Please make sure the username should not be empty.");
         }else if(password.equals("")){
-            JOptionPane.showMessageDialog(view,"Tolong pastikan password tidak boleh kosong");
+            JOptionPane.showMessageDialog(view,"Please make sure the password should not be empty.");
         }else{
             try{
                 UsersInterface usersInterface = ConnectDB.getUser();
                 Users user = usersInterface.findByUserNameAndPassword(userName, password, view);
 
                 if(user == null){
-                    JOptionPane.showMessageDialog(view, "Username dan Kata sandi salah!");
+                    JOptionPane.showMessageDialog(view, "Username and Password are wrong!");
                     return;
                     // to start menu
                 }else{
